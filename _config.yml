@@ -5,7 +5,7 @@ site_name: rainboy的题解库
 author: rainboy
 
 # 头像,选一个图床上传你的头像
-avatar: https:/github.com/rainboylvx.png
+avatar: https://github.com/rainboylvx.png
 
 
 # 你的github主页
@@ -24,7 +24,7 @@ out_dir: output/
 # 分页的大小
 pagenation: 30
 
-web_prefix: "/pcs/"
+web_prefix: "/"
 
 cover:
 
