@@ -1,0 +1,160 @@
+
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fonts/iconfont.css" />
+    <script src="/static/popper/popper.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/google-font/font.css">
+    <link rel="stylesheet" href="/static/app.css">
+    <style>
+
+pre {
+    font-family: 'Ubuntu Mono' !important;
+}
+    </style>
+</head>
+
+    <link rel="stylesheet" href="/static/css/github-markdown.css">
+    <link rel="stylesheet" href="/static/css/codeHighlight.css">
+    <link rel="stylesheet" href="/static/css/codeHighlightCopy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css" />
+<body>
+    
+    <div class="header header-background" style="background-image:url(/static/img/cover.gif)">
+        <div class="container">
+            <div class="row" style="height:100%">
+                <div class="col-12  page-title">
+                    1-Bucket_Brigade
+                </div>
+                <div class="col-12  site-menu">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="/">
+                                <span class="iconfont icon-home"></span>
+                                主页
+                            </a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about.html">
+                                <span class="iconfont icon-about"></span>
+                                关于
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 bk">
+                <div class="problem-info">
+    <ul class="nav">
+        <li class="nav-item">
+            <button class="btn btn-outline">
+                标签
+            </button>
+            
+                <span class="badge">
+                    <a href="/tags/usaco/1.html">
+                        usaco
+                    </a>
+
+                </span>
+            
+                <span class="badge">
+                    <a href="/tags/性质/1.html">
+                        性质
+                    </a>
+
+                </span>
+            
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline">
+                来源
+            </button>
+            
+            <span class="badge">
+                <a class="" href="http://usaco.org/index.php?page=viewproblem2&amp;cpid=939&amp;lang=zh">usaco</a>
+            </span>
+            
+
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline">
+                难度
+            </button>
+            <span class="badge">2</span>
+        </li>
+    </ul>
+</div>
+
+                <div class="markdown-body" style="min-height:500px;">
+                    <h2 id="0kicmckkll6av1kmm52hou">解析</h2>
+<p>简单入门题目</p>
+<h2 id="hljlsiddml5aor22l9d7ds">代码</h2>
+<!--beforebegin--><div class="language-c line-numbers-mode"><!--afterbegin--><pre v-pre class="language-c"><div class="copy" onClick="CLIPBOARD(this)">copy</div><code>#include <span class="token operator">&lt;</span>iostream<span class="token operator">></span>
+#include <span class="token operator">&lt;</span>fstream<span class="token operator">></span>
+#include <span class="token operator">&lt;</span>cmath<span class="token operator">></span>
+using namespace std<span class="token punctuation">;</span>
+
+int barn_i<span class="token punctuation">,</span> barn_j<span class="token punctuation">,</span> rock_i<span class="token punctuation">,</span> rock_j<span class="token punctuation">,</span> lake_i<span class="token punctuation">,</span> lake_j<span class="token punctuation">;</span>
+
+int <span class="token function">main</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ifstream fin <span class="token punctuation">(</span><span class="token string">"buckets.in"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        string s<span class="token punctuation">;</span>
+        fin <span class="token operator">></span><span class="token operator">></span> s<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'B'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> barn_i <span class="token operator">=</span> i<span class="token punctuation">;</span> barn_j <span class="token operator">=</span> j<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'R'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> rock_i <span class="token operator">=</span> i<span class="token punctuation">;</span> rock_j <span class="token operator">=</span> j<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> lake_i <span class="token operator">=</span> i<span class="token punctuation">;</span> lake_j <span class="token operator">=</span> j<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    ofstream fout <span class="token punctuation">(</span><span class="token string">"buckets.out"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    int dist_br <span class="token operator">=</span> <span class="token function">abs</span><span class="token punctuation">(</span>barn_i <span class="token operator">-</span> rock_i<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">abs</span><span class="token punctuation">(</span>barn_j <span class="token operator">-</span> rock_j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    int dist_bl <span class="token operator">=</span> <span class="token function">abs</span><span class="token punctuation">(</span>barn_i <span class="token operator">-</span> lake_i<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">abs</span><span class="token punctuation">(</span>barn_j <span class="token operator">-</span> lake_j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    int dist_rl <span class="token operator">=</span> <span class="token function">abs</span><span class="token punctuation">(</span>rock_i <span class="token operator">-</span> lake_i<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">abs</span><span class="token punctuation">(</span>rock_j <span class="token operator">-</span> lake_j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Check for special case where rock is between barn and lake  </span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>barn_i<span class="token operator">==</span>lake_i <span class="token operator">||</span> barn_j<span class="token operator">==</span>lake_j<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> dist_bl <span class="token operator">==</span> dist_br <span class="token operator">+</span> dist_rl<span class="token punctuation">)</span>
+        fout <span class="token operator">&lt;</span><span class="token operator">&lt;</span> dist_bl <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        fout <span class="token operator">&lt;</span><span class="token operator">&lt;</span> dist_bl <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div><!--beforeend--></div><!--afterend-->
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="navbar navbar-fixed-bottom bg-light navbar-dark border border-info border-left-0 border-right-0 border-bottom-0">
+    <div class="container" style="justify-content:center">
+        <span>
+            Copyright © 2019 rainboy. All Rights Reserved.
+        </span>
+    </div>
+</footer>
+
+    <script src="/static/app.js"></script>
+
+    <script src="//twemoji.maxcdn.com/2/twemoji.min.js?11.2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+    <script src="/static/js/viz.js"></script>
+    <script src="/static/js/full.render.js"></script>
+    <script src="/static/js/vizRender.js"></script>
+</body>
+</html>

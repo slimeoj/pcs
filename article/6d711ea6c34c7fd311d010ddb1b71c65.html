@@ -1,0 +1,238 @@
+
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fonts/iconfont.css" />
+    <script src="/static/popper/popper.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/google-font/font.css">
+    <link rel="stylesheet" href="/static/app.css">
+    <style>
+
+pre {
+    font-family: 'Ubuntu Mono' !important;
+}
+    </style>
+</head>
+
+    <link rel="stylesheet" href="/static/css/github-markdown.css">
+    <link rel="stylesheet" href="/static/css/codeHighlight.css">
+    <link rel="stylesheet" href="/static/css/codeHighlightCopy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css" />
+<body>
+    
+    <div class="header header-background" style="background-image:url(/static/img/cover.gif)">
+        <div class="container">
+            <div class="row" style="height:100%">
+                <div class="col-12  page-title">
+                    uva-12563 劲歌金曲
+                </div>
+                <div class="col-12  site-menu">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="/">
+                                <span class="iconfont icon-home"></span>
+                                主页
+                            </a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about.html">
+                                <span class="iconfont icon-about"></span>
+                                关于
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 bk">
+                <div class="problem-info">
+    <ul class="nav">
+        <li class="nav-item">
+            <button class="btn btn-outline">
+                标签
+            </button>
+            
+                <span class="badge">
+                    <a href="/tags/uva/1.html">
+                        uva
+                    </a>
+
+                </span>
+            
+                <span class="badge">
+                    <a href="/tags/标签/1.html">
+                        标签
+                    </a>
+
+                </span>
+            
+                <span class="badge">
+                    <a href="/tags/动态规划/1.html">
+                        动态规划
+                    </a>
+
+                </span>
+            
+                <span class="badge">
+                    <a href="/tags/背包/1.html">
+                        背包
+                    </a>
+
+                </span>
+            
+                <span class="badge">
+                    <a href="/tags/紫书/1.html">
+                        紫书
+                    </a>
+
+                </span>
+            
+                <span class="badge">
+                    <a href="/tags/《算法竞赛入门经典》/1.html">
+                        《算法竞赛入门经典》
+                    </a>
+
+                </span>
+            
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline">
+                来源
+            </button>
+            
+            <span class="badge">
+                <a class="" href="https://vjudge.net/problem/UVA-12563">uva</a>
+            </span>
+            
+
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline">
+                难度
+            </button>
+            <span class="badge">3</span>
+        </li>
+    </ul>
+</div>
+
+                <div class="markdown-body" style="min-height:500px;">
+                    <h2 id="yqlfegcyzdf0bq3rh25875g">解析</h2>
+<p>在唱的曲目尽量多情况下,尽量晚走,</p>
+<ul>
+<li>如果剩余时间为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span>,那么可以看成一个容量为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">T-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>的背包</li>
+<li>每个歌看成一个物品,消耗为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">t[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span>,得到的价值为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></li>
+</ul>
+<p>那题目就变成了<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">t-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69841em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>的背包最多能装多少物品(得到的最大价值!).</p>
+<p>d(i,j) 前i首歌在选的歌最多的情况下,剩余时间为j的条件下,能唱的最多的时间</p>
+<p>dp(i,n,j) 前i首哥,在选的歌曲为n首歌的情况下,剩余时间为j,最多能唱时间</p>
+<p>dp(i,n,j) = max {dp(i-1,n-1,j-a[i]), dp(i-1,n,j)}</p>
+<p>n &lt;= i-1</p>
+<p>唱n首的能达的时间有哪些?</p>
+<p>f(i,n,k) = 1</p>
+<p>前i首歌在容量为j的条件下,唱n首歌的最大时间.
+f(i,n,j) = 0</p>
+<h2 id="zkxadck1w1ikprlzovmn0a">代码</h2>
+<!--beforebegin--><div class="language-c line-numbers-mode"><!--afterbegin--><pre v-pre class="language-c"><div class="copy" onClick="CLIPBOARD(this)">copy</div><code><span class="token comment">/*-----------------
+* author: Rainboy
+* email: rainboylvx@qq.com
+* time: 2019年 05月 21日 星期二 15:33:27 CST
+* problem: uva-12563
+*----------------*/</span>
+#include <span class="token operator">&lt;</span>bits<span class="token operator">/</span>stdc<span class="token operator">++</span><span class="token punctuation">.</span>h<span class="token operator">></span>
+using namespace std<span class="token punctuation">;</span>
+
+const int jin_ge <span class="token operator">=</span> <span class="token number">11</span><span class="token operator">*</span><span class="token number">60</span> <span class="token operator">+</span> <span class="token number">18</span><span class="token punctuation">;</span>
+int T<span class="token punctuation">;</span>
+int n<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+int f<span class="token punctuation">[</span><span class="token number">9900</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+int a<span class="token punctuation">[</span><span class="token number">55</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+int all <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+int dp<span class="token punctuation">[</span><span class="token number">55</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">9900</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">/* 
+ * pre[i][j] == 1  表示 pre[i][j] 是由 pre[i-1][j-t[i]] 更新的,也就是没有选
+ * pre[i][j] == 0  表示 pre[i][j] 是由 pre[i-1][j] 更新的,也就是选了
+ *
+ * */</span>
+
+
+void <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token function">sizeof</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>dp<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token function">sizeof</span><span class="token punctuation">(</span>dp<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    all <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    int i<span class="token punctuation">,</span>j<span class="token punctuation">;</span>
+    int t1<span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        all <span class="token operator">+</span><span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+void <span class="token function">_dp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    int i<span class="token punctuation">,</span>j<span class="token punctuation">;</span>
+    all <span class="token operator">=</span> t<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>j<span class="token operator">=</span>all<span class="token punctuation">;</span>j<span class="token operator">>=</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            f<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>f<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>f<span class="token punctuation">[</span>j<span class="token operator">-</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token function">memset</span><span class="token punctuation">(</span>dp<span class="token punctuation">,</span><span class="token number">0x80</span><span class="token punctuation">,</span><span class="token function">sizeof</span><span class="token punctuation">(</span>dp<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token function">sizeof</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    int k<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">//前i个歌</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>j<span class="token operator">=</span>all<span class="token punctuation">;</span>j<span class="token operator">>=</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>j<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token comment">//容量</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>k<span class="token operator">=</span><span class="token function">min</span><span class="token punctuation">(</span>f<span class="token punctuation">[</span>all<span class="token punctuation">]</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>k<span class="token operator">>=</span><span class="token number">1</span><span class="token punctuation">;</span>k<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                dp<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>k<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">+</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    int sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Case %d: %d %d\n"</span><span class="token punctuation">,</span>T<span class="token punctuation">,</span>f<span class="token punctuation">[</span>all<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>f<span class="token punctuation">[</span>all<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>all<span class="token punctuation">]</span><span class="token operator">+</span>jin_ge<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+int <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    int x<span class="token punctuation">;</span> 
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>T<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>T<span class="token operator">&lt;=</span>x<span class="token punctuation">;</span>T<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">_dp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br></div><!--beforeend--></div><!--afterend-->
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="navbar navbar-fixed-bottom bg-light navbar-dark border border-info border-left-0 border-right-0 border-bottom-0">
+    <div class="container" style="justify-content:center">
+        <span>
+            Copyright © 2019 rainboy. All Rights Reserved.
+        </span>
+    </div>
+</footer>
+
+    <script src="/static/app.js"></script>
+
+    <script src="//twemoji.maxcdn.com/2/twemoji.min.js?11.2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+    <script src="/static/js/viz.js"></script>
+    <script src="/static/js/full.render.js"></script>
+    <script src="/static/js/vizRender.js"></script>
+</body>
+</html>
